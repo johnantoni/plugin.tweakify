@@ -1,7 +1,7 @@
 module Tweakify
 end
 
-require 'tweakify/activerecord'
+require 'tweakify/active_record'
 require 'tweakify/string'
 require 'tweakify/hash'
 require 'tweakify/array'
