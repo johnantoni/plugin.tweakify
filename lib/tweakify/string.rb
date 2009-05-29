@@ -1,9 +1,14 @@
 class String
+
   def clean(arr)
     # recursive gsub with an array (remove all found)
     s = self
     arr.each {|item| s = s.gsub(item,'')} unless arr.blank?
     return s
+  end
+
+  def trim
+    return self.strip
   end
 
   def lrtrim(l, r)
@@ -20,4 +25,9 @@ class String
     require "base64"
     return Base64.decode64(self)
   end    
+
+  def to_b
+    return self.downcase.strip = 'yes' ? true : false 
+  end
+
 end
