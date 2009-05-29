@@ -1,6 +1,6 @@
 class Object
 
-  def methods
+  def self.methods
     return self.methods.sort
   end
 
