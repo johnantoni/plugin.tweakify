@@ -27,7 +27,7 @@ class String
   end    
 
   def to_b
-    return self.downcase.strip = 'yes' ? true : false 
+    return b = self.strip.downcase == "yes" ? true : false
   end
 
 end
