@@ -1,9 +1,17 @@
 module Tweakify
 end
 
-require 'tweakify/active_record'
-require 'tweakify/string'
-require 'tweakify/hash'
-require 'tweakify/array'
-require 'tweakify/object'
-require 'tweakify/patch'
+require 'common/active_record'
+require 'common/string'
+require 'common/hash'
+require 'common/array'
+require 'common/object'
+require 'common/patches'
+
+require 'helpers/cache'
+require 'helpers/dates'
+require 'helpers/links'
+require 'helpers/rake'
+
+# time formats
+Time::DATE_FORMATS[:clean] = "%A, %B %d, %Y"

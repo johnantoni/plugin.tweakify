@@ -1,4 +1,4 @@
-module Patch
+module Patches
 
   def patch_uploads(file)
     # patch for file uploads, upload < 20k are stringio streams

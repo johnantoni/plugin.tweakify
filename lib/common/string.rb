@@ -7,6 +7,30 @@ class String
     return s
   end
 
+  def escape
+    require 'uri'
+    s = self
+    s = URI.escape(self) if self.length > 0
+    return s
+  end
+
+  def nl2br
+    self.gsub(/\n/, '<br>')
+  end
+
+  def strip_object_tag
+    self.gsub(/<object(| [^>]*)>/i, ' Flash Video ')
+  end
+
+  def truncate_words(length = 30, end_string = ' …')
+    words = self.split()
+    words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+  end
+
+  def strip_spaces
+    return self.gsub(' ', '')
+  end
+
   def trim
     return self.strip
   end
