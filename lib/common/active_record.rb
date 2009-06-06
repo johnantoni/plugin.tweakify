@@ -6,6 +6,6 @@ class ActiveRecord::Base
 
   def self.simply_paginate(id)
     # converts table into array, then finds prev/next/current & returns as hash
-    return self.to_a_simplify.paginate_values(id)
+    return self.to_a_simplify.simply_paginate_array(id)
   end
 end

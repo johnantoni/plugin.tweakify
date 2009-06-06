@@ -1,5 +1,5 @@
 class Array
-  def paginate(id)
+  def get_paginated_keys(id)
     # return positions for current, prev & next for value 'id'
     i = self.index(id)
     pos = {:prev => nil, :next => nil, :current => i}
@@ -10,8 +10,8 @@ class Array
     return pos
   end
 
-  def paginate_values(id)
-    pos = self.paginate(id)
+  def simply_paginate_array(id)
+    pos = self.get_paginated_keys(id)
     data = {:prev => nil, :next => nil, :current => nil}
     if pos[:current]
       data[:prev] = self[pos[:prev]] unless pos[:prev].blank?

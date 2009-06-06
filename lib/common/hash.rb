@@ -1,7 +1,7 @@
 class Hash
-  def paginate(id)
+  def simply_paginate_hash(id)
     # return values in current, prev & next
-    return self.flatten_values.paginate_values(id)
+    return self.flatten_values.simply_paginate_array(id)
   end
 
   def flatten
